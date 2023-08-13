@@ -82,5 +82,15 @@ namespace UnitTest
 
             CollectionAssert.AreEqual(expectedWords, actualWords);
         }
+
+        [Test]
+        public void MsgFormatString()
+        {
+            string goodFormat = "helloworld";
+            string badFormat = "HELLOWORLD1";
+
+            Assert.IsTrue(Program.MsgFormat(goodFormat));
+            Assert.IsFalse(Program.MsgFormat(badFormat));
+        }
     }
 }

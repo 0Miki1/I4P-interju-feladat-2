@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace I4P_interju_feladat_2
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

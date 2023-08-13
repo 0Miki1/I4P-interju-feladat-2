@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace I4P_interju_feladat_2
 {
-    internal class Result
+    public class Result
     {
         private string msg1;
         private string msg2;

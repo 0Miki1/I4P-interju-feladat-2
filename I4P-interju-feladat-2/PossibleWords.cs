@@ -7,7 +7,7 @@ using System.IO;
 
 namespace I4P_interju_feladat_2
 {
-    internal class PossibleWords
+    public class PossibleWords
     {
         private readonly List<string> words;
 

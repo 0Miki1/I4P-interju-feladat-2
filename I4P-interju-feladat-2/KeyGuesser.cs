@@ -8,7 +8,7 @@ using System.Xml.Schema;
 
 namespace I4P_interju_feladat_2
 {
-    internal class KeyGuesser : Transfer
+    public class KeyGuesser : Transfer
     {
         private List<string> encMessages;
         private List<string> decMessages;

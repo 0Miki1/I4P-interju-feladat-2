@@ -12,15 +12,20 @@ namespace I4P_interju_feladat_2
         private string msg2;
         private string key;
 
-        public Result(string msg1, string msg2, string key)
+        public Result(List<string> msgs, string key)
         {
-            this.msg1 = msg1;
-            this.msg2 = msg2;
+            msg1 = msgs[0];
+            msg2 = msgs[1];
             this.key = key;
         }
 
         public string Msg1 { get => msg1; }
         public string Msg2 { get => msg2; }
         public string Key { get => key; }
+
+        public override string ToString()
+        {
+            return $"Message 1: {Msg1}\nMessage 2: {Msg2}\nKey: {Key}";
+        }
     }
 }

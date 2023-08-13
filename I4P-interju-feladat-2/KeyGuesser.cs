@@ -39,7 +39,7 @@ namespace I4P_interju_feladat_2
             return 0;
         }
 
-        public string PossibleKey()
+        public Result PossibleKey()
         {
             string key = string.Empty;
             string temp = string.Empty;
@@ -105,7 +105,7 @@ namespace I4P_interju_feladat_2
                 decMessages[i] = decMessages[i].TrimEnd(' ');
             }
 
-            return "Dec[0] " + decMessages[0] + "\nDec[1] " + decMessages[1] + "\nKey    " + key + "";
+            return new Result(decMessages, key);
         }
     }
 }

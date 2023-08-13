@@ -13,7 +13,10 @@ namespace I4P_interju_feladat_2
         private List<string> encMessages;
         private List<string> decMessages;
         private string firstWordHint;
+
+        //Indicates to which index in the array the message hint belongs
         private int shorterFirstWordsMsg;
+
         private PossibleWords possibleWords;
 
         public KeyGuesser(List<string> encMessages, string firstWordHint, int shorterFirstWordsMsg, PossibleWords possibleWords)
@@ -44,6 +47,7 @@ namespace I4P_interju_feladat_2
             string key = string.Empty;
             string temp = string.Empty;
 
+            //Set the hint for one of the messages
             decMessages[shorterFirstWordsMsg] += firstWordHint;
 
             for (int i = 0; i < firstWordHint.Length; i++)
@@ -51,6 +55,7 @@ namespace I4P_interju_feladat_2
                 temp += GetChar(GetCharCode(encMessages[shorterFirstWordsMsg][i]) - GetCharCode(firstWordHint[i]));
             }
 
+            //Find the start of the key
             key += possibleWords.Words.Where(x => x.StartsWith(temp)).FirstOrDefault() + " ";
 
             int useI = shorterFirstWordsMsg;

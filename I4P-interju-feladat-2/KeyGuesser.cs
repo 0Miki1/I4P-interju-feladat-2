@@ -14,7 +14,6 @@ namespace I4P_interju_feladat_2
         private List<string> decMessages;
         private string firstWordHint;
         private int shorterFirstWordsMsg;
-        private int longerFirstWordMsg;
         private PossibleWords possibleWords;
 
         public KeyGuesser(List<string> encMessages, string firstWordHint, int shorterFirstWordsMsg, PossibleWords possibleWords)
@@ -29,6 +28,7 @@ namespace I4P_interju_feladat_2
             this.possibleWords = possibleWords;
         }
 
+        //Changes the encrypted messages or decrypted messages lists' index 
         private int usingInd(int i)
         {
             if (i == 0)
